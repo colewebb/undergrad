@@ -9,7 +9,7 @@ output = cv.connectedComponentsWithStats(binary, 8, cv.CV_32S)
 img2 = binary
 i = 2
 while i < len(output[2]):
-    if output[2][i][4] <= 100:
+    if output[2][i][4] >= 100:
         img2[output[1] == i + 1] = 255
     else:
         print(output[2][i])
